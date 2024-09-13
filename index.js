@@ -20,6 +20,10 @@ app.use('/user',userRoutes)
 const PORT = process.env.PORT || 7000;
 const URL = process.env.MONGO_URL;
 
+app.get('/', (req, res) => {
+  res.send('Hello World!')
+})
+
 //connection with Database
 mongoose.connect(URL).then(()=>{
     console.log("DB Connected Successfully");
